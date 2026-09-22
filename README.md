@@ -1,174 +1,179 @@
-Zalith Launcher 2 — Local Edition
+LocalLauncher
 
-An unofficial modified build of Zalith Launcher 2 for Android.
+<p align="center">
+  <strong>A community-driven Zalith Launcher 2 fork with offline accounts, additional features, and a focus on customization.</strong>
+</p><p align="center">
+  <a href="https://github.com/simpicutew/ZalithLauncher2-Local/releases">Downloads</a>
+  ·
+  <a href="https://github.com/simpicutew/ZalithLauncher2-Local/issues">Issues</a>
+  ·
+  <a href="https://github.com/simpicutew/ZalithLauncher2-Local/releases/latest">Latest Release</a>
+</p>---
 
-This fork restores local/offline account support and provides a prebuilt ARM64-v8a APK.
+🚀 What is LocalLauncher?
 
-«[!WARNING]
-This is an unofficial modified build and is not affiliated with, endorsed by, or distributed by the original Zalith Launcher 2 developers.»
+LocalLauncher is an unofficial community fork of Zalith Launcher 2 for Android.
 
-What is this?
+The project started with a simple goal:
 
-This project is a modified version of Zalith Launcher 2 focused on restoring local/offline account functionality.
+«Bring back offline/local account support and build additional launcher features that make Zalith Launcher more flexible and convenient to use.»
 
-The goal of this build is simple:
+LocalLauncher is not intended to be just a copy of the original project. The goal is to gradually build an independent launcher experience with additional customization, quality-of-life improvements, and experimental features.
 
-- Restore the local/offline account option.
-- Allow the launcher to create and use local accounts.
-- Keep the existing Zalith Launcher 2 interface and launcher functionality.
-- Provide a ready-to-install ARM64-v8a APK.
+✨ Key Features
 
-Current status
+🔐 Offline & Local Accounts
 
-Feature| Status
-Local / Offline accounts| ✅ Supported
-Minecraft Java Edition launching| ✅ Supported
-ARM64-v8a| ✅ Available
-Microsoft accounts| ❌ Not supported
-Microsoft OAuth login| ❌ Not configured
-Original Zalith Launcher 2 UI| ✅ Retained
+- Offline/local account support
+- Create and manage local profiles
+- Use local accounts without requiring Microsoft authentication
+- Designed for local Minecraft environments and testing
 
-Microsoft accounts
+🎮 Launcher Improvements
 
-Microsoft account login is not supported in this build.
+- Improved account management
+- Additional launcher customization
+- Quality-of-life improvements
+- UI improvements
+- Bug fixes and stability improvements
+- More control over launcher behavior
 
-The original project obtains its Microsoft OAuth client ID through its build configuration. This fork does not ship a Microsoft OAuth client ID, so Microsoft authentication is intentionally unavailable.
+⚙️ Advanced Configuration
 
-Do not expect the "Sign in with Microsoft" flow to work in this build.
+The project is intended to provide more control over:
 
-Download
+- Java configuration
+- JVM arguments
+- Memory allocation
+- Renderer configuration
+- Minecraft instances
+- Launcher settings
 
-The latest APK is available in the GitHub Releases section:
+More configuration options will be added over time.
 
-"Download the latest release" (../../releases/latest)
+🧩 Planned Features
 
-Current release:
+LocalLauncher is actively evolving. Planned features include:
 
-v2.5.3-local-1
+- [ ] Per-instance Java/JVM configuration
+- [ ] Import/export launcher settings
+- [ ] Account backup and restore
+- [ ] Improved instance management
+- [ ] Quick-launch shortcuts
+- [ ] Advanced renderer configuration
+- [ ] Improved crash diagnostics
+- [ ] Better log viewer
+- [ ] More launcher customization
+- [ ] Additional quality-of-life features
+- [ ] Performance and stability improvements
 
-Architecture:
+Some features may be experimental and can change between releases.
 
-ARM64-v8a ("arm64-v8a")
+📥 Download
 
-If Android reports that the APK is incompatible with your device, your device may use a different CPU architecture.
+Download the latest version from GitHub Releases:
 
-Changes from upstream
+"Download LocalLauncher" (https://github.com/simpicutew/ZalithLauncher2-Local/releases/latest)
 
-This fork currently contains the following changes:
+Current release
 
-- Restored the local/offline account creation flow.
-- Restored the normal account menu when adding an account.
-- Restored the normal account menu when launching the game without an existing account.
-- Adjusted the launcher build configuration for the development/build environment.
-- Includes minor native/build-related modifications required for this build.
+Version: "2.5.3"
+Architecture: "arm64-v8a"
+Build: Unofficial modified build
 
-The changes are based on the Zalith Launcher 2 source tree.
+«ARM64 is currently the primary supported architecture for LocalLauncher releases.»
 
-Screenshots
+🛠️ Building
 
-Screenshots can be added here later.
-
-For example:
-
-docs/
-└── screenshots/
-    ├── accounts.png
-    └── launcher.png
-
-Then reference them with:
-
-![Account screen](docs/screenshots/accounts.png)
-
-Building
+LocalLauncher can be built from source using the Android/Gradle toolchain.
 
 Requirements
 
-The upstream project contains its own build requirements and instructions.
+- Android SDK
+- Android NDK "25.2.9519653"
+- Java / JDK compatible with the project
+- Gradle wrapper included in the repository
 
-For development, clone this repository:
+Build
 
-git clone https://github.com/simpicutew/ZalithLauncher2-Local.git
-cd ZalithLauncher2-Local
+./gradlew assembleDebug
 
-Then open the project with Android Studio and build the Android application.
+The resulting APK can be found under:
 
-Architecture
+ZalithLauncher/build/outputs/apk/
 
-The currently published release is built for:
+🧪 Development
 
-ARM64-v8a
+LocalLauncher is developed as a community project.
 
-Other architectures have not been tested as part of the current release.
+Ideas, bug reports, feature requests, and improvements are welcome.
 
-Development
+If you want to propose a feature, please explain:
 
-This repository is primarily maintained as a personal modified build.
+1. What the feature does
+2. Why it would be useful
+3. How you expect it to work
 
-Changes are made on top of the upstream Zalith Launcher 2 source code rather than being a completely independent launcher implementation.
+For bugs, include logs and enough information to reproduce the problem whenever possible.
 
-Pull requests and issues are welcome, but compatibility with the upstream project should not be assumed.
+🗺️ Roadmap
 
-Credits
+v2.5.x
 
-This project is based on Zalith Launcher 2.
+- [x] Restore offline/local account support
+- [x] ARM64 native build
+- [x] LocalLauncher branding
+- [ ] Improve account management
+- [ ] Add configuration backup/export
+- [ ] Expand launcher customization
 
-Original project:
+Future
 
-https://github.com/ZalithLauncher/ZalithLauncher2
+- [ ] Per-instance configuration
+- [ ] Advanced Java/JVM management
+- [ ] Improved diagnostics
+- [ ] Better instance management
+- [ ] Additional launcher tools
+- [ ] More customization
+- [ ] Community-requested features
 
-The original project and its contributors retain their respective copyrights and license notices.
+The roadmap is not fixed and may change as development progresses.
 
-This repository does not claim ownership of the original Zalith Launcher 2 code.
+⚠️ Disclaimer
 
-AI-assisted development
+LocalLauncher is an unofficial community modification of Zalith Launcher 2.
 
-Parts of the modifications in this fork were developed with assistance from GPT-5.6 Luna.
+This project is not affiliated with, endorsed by, or supported by the official Zalith Launcher team.
 
-AI assistance does not change the copyright or licensing status of the original project.
+Minecraft is a trademark of Mojang Studios. LocalLauncher is not affiliated with Mojang or Microsoft.
 
-The repository maintainer is responsible for reviewing, testing, and distributing the resulting modifications.
+For the original project, visit:
 
-License
+"ZalithLauncher/ZalithLauncher2" (https://github.com/ZalithLauncher/ZalithLauncher2)
 
-This project contains code derived from Zalith Launcher 2 and is distributed according to the applicable upstream license.
+📄 License
 
-See:
+LocalLauncher follows the licensing requirements of the upstream project and its dependencies.
 
-- ""LICENSE"" (LICENSE)
-- the original Zalith Launcher 2 repository
-- the license notices included with the source code
+See the repository's "LICENSE" file for details.
 
-This modified build is provided without warranty.
+🤝 Contributing
 
-Disclaimer
+Contributions are welcome.
 
-Zalith Launcher 2 — Local Edition is an unofficial modification.
+You can help by:
 
-It is not the official Zalith Launcher 2 release.
+- Reporting bugs
+- Suggesting features
+- Improving documentation
+- Testing builds
+- Submitting pull requests
+- Helping improve existing features
 
-The name, trademarks, logos, and other intellectual property associated with the upstream project remain the property of their respective owners.
+If you have an idea that could make the launcher better, open an issue and describe it.
 
-Minecraft is a trademark of Microsoft Corporation. This project is not affiliated with or endorsed by Microsoft.
+---
 
-Reporting problems
-
-Before opening an issue, please check whether the problem is specific to this modified build.
-
-When reporting a problem, include:
-
-- Device model
-- Android version
-- CPU architecture
-- Launcher version
-- Steps to reproduce the problem
-- Relevant logs or screenshots
-
-Do not include passwords, access tokens, private keys, OAuth credentials, or other sensitive information in issues.
-
-Project status
-
-This is a small unofficial modification of Zalith Launcher 2.
-
-The current priority is keeping the local/offline account workflow functional and providing a usable ARM64-v8a build.
-
-Features from the upstream project may change or break as the upstream codebase evolves.
+<p align="center">
+  <strong>LocalLauncher — more control, more features, your launcher.</strong>
+</p>
