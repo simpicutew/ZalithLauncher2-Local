@@ -87,10 +87,18 @@ private fun TopBar(
             modifier = modifier,
             horizontalArrangement = Arrangement.Center
         ) {
-            Text(
-                modifier = Modifier.align(Alignment.CenterVertically),
-                text = BuildKeys.LAUNCHER_NAME
-            )
+            Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Text(
+                        text = BuildKeys.LAUNCHER_NAME
+                    )
+                    Text(
+                        text = "Unofficial modified build",
+                        style = androidx.compose.material3.MaterialTheme.typography.labelSmall
+                    )
+                }
         }
     }
 }
