@@ -226,8 +226,7 @@ fun LaunchGameOperation(
                 eventViewModel.sendToast(androidText(R.string.game_launch_no_account))
                 val isOffline = AccountsManager.isOffline.value
                 toAccountManageScreen(
-                    if (isOffline) FirstLoginMenu.MICROSOFT
-                    else FirstLoginMenu.NORMAL
+                    FirstLoginMenu.NORMAL
                 )
                 launchGameViewModel.updateOperation(LaunchGameOperation.None)
             }

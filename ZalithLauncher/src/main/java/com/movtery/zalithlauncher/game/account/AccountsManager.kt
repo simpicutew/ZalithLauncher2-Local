@@ -241,7 +241,7 @@ object AccountsManager {
         val isOffline = checkLimit()
         _currentAccountFlow.update {
             //若处于非正版状态，不允许使用账号
-            if (isOffline) null else currentAccount
+            if (isOffline && currentAccount?.isLocalAccount() != true) null else currentAccount
         }
         _isOffline.update { isOffline }
     }

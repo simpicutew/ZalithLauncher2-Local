@@ -117,7 +117,7 @@ JNIEXPORT jintArray JNICALL Java_com_movtery_zalithlauncher_bridge_ZLBridge_rend
     androidRgbArray = (*env)->NewIntArray(env, arrayLength);
     (*env)->SetIntArrayRegion(env, androidRgbArray, 0, arrayLength, rgbArray);
 
-    (*runtimeJNIEnvPtr_GRAPHICS)->ReleaseIntArrayElements(runtimeJNIEnvPtr_GRAPHICS, jreRgbArray, rgbArray, NULL);
+    (*runtimeJNIEnvPtr_GRAPHICS)->ReleaseIntArrayElements(runtimeJNIEnvPtr_GRAPHICS, jreRgbArray, rgbArray, 0);
     // (*env)->DeleteLocalRef(env, androidRgbArray);
     // free(rgbArray);
     
