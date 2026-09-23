@@ -34,13 +34,12 @@ private val REPLACE_MIRROR_HOLDERS = listOf(
 )
 
 private fun assetPlatformPriority(): MirrorPriority =
-    resolveMirrorPriority(AllSettings.assetPlatformSource.getValue(), mainland = true)
+    resolveMirrorPriority(AllSettings.assetPlatformSource.getValue(), mainland = isChinaMainland())
 
 /**
  * 按是否中国大陆决定是否启用 MCIM 镜像，并按偏好生成有序候选链接
  */
 fun String.mapMCIMMirrorUrls(): List<String> {
-    if (!isChinaMainland()) return listOf(this)
 
     val mirroredUrl = REPLACE_MIRROR_HOLDERS.find { key ->
         startsWith(key)
@@ -55,7 +54,6 @@ fun String.mapMCIMMirrorUrls(): List<String> {
  * 多链接形式：把数组内可被镜像替换的链接生成镜像版本，按偏好穿插到原列表前/后
  */
 fun Array<String>.mapMCIMMirrorUrls(): List<String> {
-    if (!isChinaMainland()) return toList()
 
     val sources = mapNotNull { url ->
         REPLACE_MIRROR_HOLDERS.find { key ->

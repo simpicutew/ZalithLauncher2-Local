@@ -110,7 +110,7 @@ suspend fun <E: AbstractPlatformSearcher, T> mirroredPlatformSearcher(
  * 镜像源只能在中国地区使用
  */
 fun mirroredCurseForgeSource(
-    enabledMirror: Boolean = isChinaMainland()
+    enabledMirror: Boolean = true
 ): List<CurseForgeSearcher> {
     val source = resolveMirrorPriority(AllSettings.assetPlatformSource.getValue(), mainland = enabledMirror)
     val mirrorSource = mirrorCurseForgeSearcher.takeIf { enabledMirror }
