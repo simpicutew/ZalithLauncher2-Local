@@ -1,3 +1,13 @@
+<!-- LOCAL-LAUNCHER-ARCHIVE-NOTICE:START -->
+> **ARCHIVED / АРХИВ — LocalLauncher is discontinued.**
+>
+> ZalithLauncher 2 **v2.7** includes Local/Offline account support, so the original purpose of this fork is no longer needed. Continue with the [official ZalithLauncher 2 project](https://github.com/ZalithLauncher/ZalithLauncher2).
+>
+> Этот форк больше не поддерживается. Исторические исходники и релизы оставлены для справки.
+>
+> **Note:** custom LocalLauncher patches (including MCIM mirror fallback) may differ from upstream.
+<!-- LOCAL-LAUNCHER-ARCHIVE-NOTICE:END -->
+
 LocalLauncher
 
 <p align="center">
